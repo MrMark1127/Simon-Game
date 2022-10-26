@@ -58,7 +58,7 @@ function startOver() {
 
 //Detecting button clicks, adding the button ID to an array and recording what the user has clicked
 $(".btn").click(function () {
-
+if (started) {
   let userChosenColor = $(this).attr("id");
   userClickedPattern.push(userChosenColor);
 
@@ -66,7 +66,7 @@ $(".btn").click(function () {
   animatePress(userChosenColor);
 
   checkAnswer(userClickedPattern.length - 1)
-
+}
 });
 
 $(document).keypress(function (e) {
