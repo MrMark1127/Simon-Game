@@ -20,6 +20,7 @@ function nextSequence() {
 
 function playSound(name) {
   let sound = new Audio(`sounds/${name}.mp3`);
+  sound.volume = 0.025
   sound.play();
 }
 
@@ -75,5 +76,3 @@ $(document).keypress(function (e) {
     started = true;
   }
 });
-
-
